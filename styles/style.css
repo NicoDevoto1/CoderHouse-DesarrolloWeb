@@ -1,0 +1,1063 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Para que el padding no aumente el ancho total */
+}
+
+/*Fuerzo la scroll bar siempre para que me queden igual los headers*/
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Tipografía limpia */
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* --- VARIABLES (Opcional, para mantener orden) --- */
+:root {
+    --primary-color: #F38420;
+    --text-white: #ffffff;
+}
+
+/* --- HERO WRAPPER --- */
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* Ocupa toda la pantalla */
+    background-color: #1a1a1a;
+    /* Fondo oscuro de respaldo */
+    overflow: hidden;
+}
+
+/* FONDO BORROSO (Ambientación) */
+.hero-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px) brightness(0.4);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.enlace{
+    transition: all 0.3s ease;
+}
+
+.enlace:hover{
+    color: #ffb26e !important; /* Usamos el naranja de Kondor */
+    /* El !important asegura que le gane a la clase text-white de Bootstrap */
+}
+
+/* --- CONTENIDO HERO (TEXTO E IMAGEN) --- */
+
+.hero {
+    position: relative;
+    /* ← CLAVE */
+    z-index: 1;
+    /* ← CLAVE */
+    padding: 140px;
+}
+
+.hero__content {
+    color: white;
+}
+
+.hero__eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.hero__title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin: 1rem 0 2rem;
+}
+
+.hero__media img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.acciones {
+    color: #fff;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* --- HEADER --- */
+
+.navbar {
+    min-height: 80px;
+    background-color: var(--primary-color) ;
+}
+
+.nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Header global consistente */
+header .nav-link {
+    font-size: 0.75rem;
+}
+
+header .navbar-brand img {
+    height: 32px;
+}
+
+.btn-carrito-limpio {
+    background: none !important;
+    border: 1px solid #fff !important;
+    padding: 8px 20px !important;
+    
+    /* 2. Estilo de texto KONDOR */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    
+    /* 3. Animación suave */
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Efecto al pasar el mouse */
+.btn-carrito-limpio:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important; /* Invierte colores al estilo Bauhaus */
+}
+
+/*FIN DEL HEADER*/
+/* --- SECCIÓN TODO LO NUEVO --- */
+.todo-lo-nuevo {
+    padding: 60px 20px;
+    text-align: center;
+    /* Centra el título y las tarjetas */
+    background-color: #ffffff;
+}
+
+/* Encabezado de sección */
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    /* Primera letra mayúscula */
+}
+
+/* Filtros de categoría (Hombre, Mujer, etc.) */
+.category-filter {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.category-filter li {
+    display: inline-block;
+    /* Uno al lado del otro */
+    margin: 0 15px;
+}
+
+.category-filter a {
+    text-decoration: none;
+    color: #666;
+    /* Gris oscuro */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.category-filter a:hover {
+    color: #000;
+    /* Negro al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* --- GRILLA DE PRODUCTOS --- */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+/* Tarjeta individual */
+.product-card {
+    /* Ya no necesitamos display: inline-block, ni width, ni margin.
+       El grid controla el ancho automáticamente. */
+    text-align: center;
+    background-color: #fff;
+    /* Opcional: para asegurar fondo limpio */
+}
+
+/* Contenedor de imagen */
+.img-container {
+    width: 100%;
+    /* Ahora ocupa el 100% de la celda del grid */
+    height: 300px;
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* Corregí el selector: .img-container (coincide con tu HTML) */
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    /* Suavizamos la animación */
+}
+
+/* Efecto Hover corregido con las clases correctas */
+.product-card:hover .img-container img {
+    transform: scale(1.07);
+}
+
+/* Información del producto */
+.product-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: normal;
+}
+
+.product-info p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+    border-top: 2px solid #333;
+    display: inline-block;
+    padding-top: 5px;
+    width: 50px;
+}
+
+/* --- CATEGORÍAS (Grilla manual) --- */
+.categories-container {
+    width: 100%;
+    /* Truco para limpiar espacios en inline-block */
+    font-size: 0;
+}
+
+.category-card {
+    /* Calculo manual: 25% ancho - margenes */
+    width: 23%;
+    margin: 1%;
+    display: inline-block;
+    /* Bloques uno al lado del otro */
+    vertical-align: top;
+    background: white;
+    padding-bottom: 15px;
+    font-size: 16px;
+    /* Restauramos tamaño de fuente */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.category-card img {
+    width: 100%;
+    height: 300px;
+    /* Altura fija para uniformidad */
+    object-fit: cover;
+    /* Recorta la imagen para que no se deforme */
+    margin-bottom: 15px;
+}
+
+.category-card h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* --- SECCIÓN NOTICIAS --- */
+.news-section {
+    padding: 60px 50px;
+    /* Margen externo igual al resto de la web */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+/* Contenedor que agrupa todo */
+.news-grid {
+    width: 100%;
+    font-size: 0;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.news-col-left {
+    display: inline-block;
+    width: 40%;
+    /* Ocupa el 40% del ancho */
+    vertical-align: top;
+    margin-right: 2%;
+    /* Espacio entre columna izq y der */
+}
+
+/* --- COLUMNA DERECHA --- */
+.news-col-right {
+    display: inline-block;
+    width: 58%;
+    /* 40% + 2% margen + 58% = 100% */
+    vertical-align: top;
+}
+
+/* --- TARJETAS (CARDS) --- */
+.news-card {
+    background-color: #ddd;
+    /* Color de fondo gris como el wireframe por si falla la imagen */
+    overflow: hidden;
+    /* Corta la imagen si sobra */
+    position: relative;
+    width: 100%;
+}
+
+.news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mantiene la proporción de la foto sin deformarla */
+    display: block;
+    transition: transform 0.3s;
+    /* Efecto suave opcional */
+}
+
+/* Efecto opcional: Zoom al pasar el mouse */
+.news-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- DEFINICIÓN DE ALTURAS --- */
+/* Altura total = 620px (ejemplo) */
+.vertical-card {
+    height: 620px;
+}
+
+/* Parte derecha: Arriba (300px) + Abajo (300px) + Margen (20px) = 620px */
+.horizontal-card {
+    height: 300px;
+    margin-bottom: 20px;
+    /* El espacio horizontal del medio */
+}
+
+/* Fila inferior de la derecha */
+.news-row-bottom {
+    width: 100%;
+}
+
+.small-card {
+    display: inline-block;
+    width: 48%;
+    /* Casi la mitad */
+    height: 300px;
+    margin-right: 4%;
+    /* Espacio entre los dos cuadros chicos */
+    vertical-align: top;
+}
+
+/* Quitamos el margen derecho al último cuadro para que no se caiga */
+.small-card.last {
+    margin-right: 0;
+}
+
+/*Comienzo del banner que todavía tengo que ver que poner*/
+.seccion-banner {
+    background-image: url("/img/ImgBanner.jpg");
+    /* reemplazo por la imagen que quiero */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 80px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.contenido-banner {
+    background-color: #15151e;
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+}
+
+.contenido-banner h2 {
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.contenido-banner p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.btn-suscribirse {
+    padding: 12px;
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rojo {
+    color: #F38420;
+    background-color: #15151e;
+}
+
+/*INICIO DE FOOTER*/
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+.copyright a {
+    color: #aaa;
+    text-decoration: underline;
+}
+
+/*PÁGINA MUJERES A PARTIR DE ACÁ*/
+
+/* Fuerzo la scroll bar siempre para evitar saltos de layout */
+html {
+    overflow-y: scroll;
+}
+
+.prendas-page {
+    /* Quitamos el padding lateral fijo de 40px y usamos el del container de Bootstrap */
+    padding-top: 140px; 
+    padding-bottom: 60px;
+}
+
+/* HEADER INTERNO */
+h1 {
+    font-size: clamp(28px, 4vw, 40px); /* Tamaño fluido */
+    letter-spacing: -1px;
+}
+
+.breadcrumb-custom {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.order-select {
+    padding: 10px 15px;
+    border: 1px solid #000;
+    background: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.order-select:hover {
+    background: #f4f4f4;
+}
+
+/* SIDEBAR */
+.category-list li {
+    padding: 8px 0;
+    font-size: 13px;
+    color: #555;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.category-list li:hover {
+    color: #000;
+    padding-left: 5px; /* Pequeño desplazamiento visual */
+}
+
+.category-list li.active {
+    font-weight: 900;
+    color: #000;
+}
+
+/* PRODUCTOS */
+.product-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Efecto multimedia de elevación */
+}
+
+.product-img {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Proporción de moda profesional */
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Solución para que la imagen siempre llene el cuadro */
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.08); /* Zoom suave al entrar */
+}
+
+.product-card h3 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 15px;
+    color: #000;
+}
+
+/* BADGE KONDOR STYLE */
+.badge-promo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000; /* Negro para mayor contraste y estilo premium */
+    color: #fff;
+    font-size: 10px;
+    font-weight: 900;
+    padding: 5px 10px;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+/* --- CATEGORÍAS MÓVILES SCROLL --- */
+.categorias-moviles-scroll {
+    display: flex;
+    overflow-x: auto; /* Permite deslizar hacia los costados */
+    white-space: nowrap;
+    gap: 15px;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Esconde la barra en Firefox */
+}
+
+.categorias-moviles-scroll::-webkit-scrollbar {
+    display: none; /* Esconde la barra en Chrome/Safari */
+}
+
+.cat-item {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.cat-item.active {
+    color: #000;
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+}
+
+/* --- AJUSTES NAVBAR --- */
+.navbar-collapse {
+    /* Fondo naranja para el menú móvil para que no sea transparente */
+    background-color: #F38420; 
+    padding: 0 20px;
+}
+
+/*Comienzo de página hombres a partir de acá*/
+
+/* Fuerzo la scroll bar siempre para evitar saltos de layout */
+html {
+    overflow-y: scroll;
+}
+
+.prendas-page {
+    /* Quitamos el padding lateral fijo de 40px y usamos el del container de Bootstrap */
+    padding-top: 140px; 
+    padding-bottom: 60px;
+}
+
+/* HEADER INTERNO */
+h1 {
+    font-size: clamp(28px, 4vw, 40px); /* Tamaño fluido */
+    letter-spacing: -1px;
+}
+
+.breadcrumb-custom {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.order-select {
+    padding: 10px 15px;
+    border: 1px solid #000;
+    background: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.order-select:hover {
+    background: #f4f4f4;
+}
+
+/* SIDEBAR */
+.category-list li {
+    padding: 8px 0;
+    font-size: 13px;
+    color: #555;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.category-list li:hover {
+    color: #000;
+    padding-left: 5px; /* Pequeño desplazamiento visual */
+}
+
+.category-list li.active {
+    font-weight: 900;
+    color: #000;
+}
+
+/* PRODUCTOS */
+.product-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Efecto multimedia de elevación */
+}
+
+.product-img {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Proporción de moda profesional */
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen llene el cuadrado */
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.08); /* Zoom suave al entrar */
+}
+
+.product-card h3 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 15px;
+    color: #000;
+}
+
+/* BADGE KONDOR STYLE */
+.badge-promo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000; /* Negro para mayor contraste y estilo premium */
+    color: #fff;
+    font-size: 10px;
+    font-weight: 900;
+    padding: 5px 10px;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+/* --- CATEGORÍAS MÓVILES SCROLL --- */
+.categorias-moviles-scroll {
+    display: flex;
+    overflow-x: auto; /* Permite deslizar hacia los costados */
+    white-space: nowrap;
+    gap: 15px;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Esconde la barra en Firefox */
+}
+
+.categorias-moviles-scroll::-webkit-scrollbar {
+    display: none; /* Esconde la barra en Chrome/Safari */
+}
+
+.cat-item {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.cat-item.active {
+    color: #000;
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+}
+
+/* --- AJUSTES NAVBAR --- */
+.navbar-collapse {
+    /* Fondo naranja para el menú móvil para que no sea transparente */
+    background-color: #F38420; 
+    padding: 0 20px;
+}
+
+/*Fin página hombres*/
+
+/*Comienzo página contacto*/
+
+/* --- ESTILOS ESPECÍFICOS DE LA PÁGINA DE CONTACTO --- */
+
+/* --- RESET --- */
+:root {
+    --color-naranja: #F38420;
+    --color-gris-bg: #b0b0b0;
+}
+
+/* --- ESTILOS PERSONALIZADOS --- */
+
+/* Clase para el fondo naranja (Bootstrap no tiene este color exacto) */
+.bg-naranja-kondor {
+    background-color: var(--color-naranja);
+    /* Asegura que cubra toda la altura */
+}
+
+/* Estilos de la columna izquierda (Imagen) */
+.split-left {
+    background-color: var(--color-gris-bg);
+    background-image: url('../assets/split-left-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    /* Mantiene tu efecto de mezcla */
+}
+
+/* Overlay para oscurecer un poco si hace falta */
+.overlay-content {
+    background: rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+/*Close*/
+.close-btn {
+  cursor: pointer;
+}
+
+.close-btn a {
+    color:#111;
+    text-decoration: none;
+}
+
+.close-btn a:hover {
+  color: #111;
+}
+
+/* Tipografías Grandes */
+.big-title {
+    font-size: 5rem;
+    /* Usamos REM para que sea responsive */
+    line-height: 0.9;
+    font-weight: 900;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+/* Inputs personalizados */
+/* Quitamos el borde redondeado de Bootstrap y el borde azul al hacer click (focus) */
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #000 !important;
+    /* Borde negro sutil al escribir */
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #111;
+    color: #888;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    /* Centra verticalmente */
+    border-radius: 50%;
+}
+
+.btn-secondary {
+    display: inline-block;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: black;
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+  .big-title {
+    font-size: 3rem;
+  }
+}
+
+/*Fin página de contacto*/
+
+/*Comienzo página del carrito*/
+
+.carrito-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+/* LISTA DE ITEMS */
+.carrito-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.carrito-img {
+    width: 100px;
+    height: 130px;
+    flex-shrink: 0;
+}
+
+.carrito-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la ropa se deforme */
+}
+
+/* SELECTOR DE CANTIDAD */
+.cantidad-selector {
+    width: fit-content;
+}
+
+.cantidad-selector input {
+    width: 40px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    background: none;
+}
+
+.cantidad-selector button {
+    border: none;
+    background: none;
+    padding: 5px 10px;
+}
+
+/* BOTÓN ELIMINAR */
+.btn-eliminar {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.btn-eliminar:hover {
+    color: #000;
+}
+
+/*Boton finalizar compra*/
+
+.btn-eliminar{
+    text-decoration: none;
+    color: #eee;
+}
+
+/* RESUMEN DE COMPRA */
+.resumen-compra {
+    background-color: #fcfcfc;
+}
+
+.resumen-compra h4 {
+    letter-spacing: -1px;
+}
+
+/*Fin página del carrito*/
+
+/* RESPONSIVE carrito*/
+@media (max-width: 991px) {
+    .resumen-compra {
+        margin-top: 40px;
+        position: static !important; /* Deja de ser sticky en móvil */
+    }
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero__media img {
+        max-height: 45vh;
+    }
+
+    .hero__title {
+        font-size: 2.2rem;
+    }
+
+    .hero__eyebrow {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        grid-template-columns: auto 1fr auto;
+        height: 64px;
+        padding: 0 1.5rem;
+    }
+
+    .header__nav--left {
+        display: none;
+    }
+
+    .header__logo img {
+        height: 26px;
+    }
+
+    .header__actions {
+        font-size: 0.8rem;
+        gap: 12px;
+    }
+}
+
+/*Ajusto tamaños del grid*/
+@media (max-width: 768px) {
+    .productos-grid {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .img-container {
+        height: 220px;
+    }
+}
+
+/* News Section responsive*/
+@media (max-width: 768px) {
+
+    .news-col-left,
+    .news-col-right {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+
+    .vertical-card,
+    .horizontal-card,
+    .small-card {
+        height: 240px;
+        margin-bottom: 20px;
+    }
+
+    .small-card {
+        width: 100%;
+    }
+}
+
+/*Banner*/
+@media (max-width: 768px) {
+
+    .seccion-banner {
+        height: auto;
+        padding: 40px 20px;
+        justify-content: center;
+    }
+
+    .contenido-banner {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contenido-banner h2 {
+        font-size: 28px;
+    }
+
+    .contenido-banner p {
+        font-size: 16px;
+    }
+}
