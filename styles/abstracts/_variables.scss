@@ -1,0 +1,22 @@
+// 1. Mapeado de los colores
+$colors: (
+    'primary': #F38420,
+    'white': #ffffff,
+    'dark': #1a1a1a,
+    'gray': #f0f0f0,
+    'text': #333333,
+    'black': #000000
+);
+
+// 2. FUNCIÓN
+@function color($name) {
+    @return map-get($colors, $name);
+}
+// 3. Distribución de ls colores asignados
+$naranja-kondor: map-get($colors, 'primary');
+$text-white:     map-get($colors, 'white');
+$bg-oscuro:      map-get($colors, 'dark');
+$gris-claro:     map-get($colors, 'gray');
+
+// 4. TIPOGRAFÍA
+$font-stack: 'Helvetica Neue', Arial, sans-serif;

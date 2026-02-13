@@ -1,0 +1,27 @@
+// Mixin para Flexbox centrado
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Mixin para imagen de fondo (Hero)
+@mixin bg-cover($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(20px) brightness(0.4);
+    transform: scale(1.1);
+}
+
+// --- MIXIN FALTANTE (ESTO ARREGLA EL ERROR EN HOME) ---
+@mixin titulo-seccion {
+    text-align: center;
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+}
