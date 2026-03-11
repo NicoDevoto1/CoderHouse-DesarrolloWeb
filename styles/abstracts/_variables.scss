@@ -14,6 +14,7 @@ $colors: (
 }
 // 3. Distribución de ls colores asignados
 $naranja-kondor: map-get($colors, 'primary');
+$negro-kondor: map-get($colors, 'negro');
 $text-white:     map-get($colors, 'white');
 $bg-oscuro:      map-get($colors, 'dark');
 $gris-claro:     map-get($colors, 'gray');

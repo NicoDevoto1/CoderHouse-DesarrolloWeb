@@ -581,4 +581,64 @@ html {
   color: red;
 }
 
+.contact-page {
+  padding-top: 80px;
+  height: 100vh;
+  overflow: hidden;
+}
+.contact-page .container-fluid, .contact-page .row {
+  height: 100%;
+}
+
+.split-left {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/split-left-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.split-left .big-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.9;
+  font-weight: 700;
+}
+.split-left .intro-text h2 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.close-btn a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.close-btn a:hover {
+  color: #F38420;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #000000;
+}
+
+.big-title {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.intro-text {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

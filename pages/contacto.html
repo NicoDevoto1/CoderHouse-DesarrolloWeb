@@ -13,20 +13,60 @@
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 
-<body>
+<body class="contact-page">
 
-  <div class="container-fluid min-vh-100">
-    <div class="row min-vh-100">
+  <header class="fixed-top negro-kondor shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container-fluid px-4">
+                <div class="row w-100 align-items-center g-0">
+                    <div class="col-lg-4 d-none d-lg-flex gap-3">
+                        <a class="nav-link text-white enlace" href="../index.html">Home</a>
+                        <a class="nav-link text-white enlace" href="#">Página</a>
+                        <a class="nav-link text-white enlace" href="#">Todo lo nuevo</a>
+                        <a class="nav-link text-white enlace" href="contacto.html">Contacto</a>
+                    </div>
+
+                    <div class="col-6 col-lg-4 text-start text-lg-center">
+                        <a class="navbar-brand m-0" href="../index.html">
+                            <img src="../assets/KondorBlanco.svg" alt="Kondor" height="32">
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-4 d-flex justify-content-end align-items-center gap-3">
+                        <div class="d-none d-lg-flex align-items-center gap-3">
+                            <a class="nav-link text-white" href="#">Ingresar</a>
+                            <a href="../pages/carrito.html" class="btn-carrito-limpio">
+                                CARRITO (0)
+                            </a>
+                        </div>
+                        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mobileMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse" id="mobileMenu">
+                    <ul class="navbar-nav d-lg-none mt-3 pb-3 text-center border-top border-white-50">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Página</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Todo lo nuevo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item pt-2 border-top border-white-25"><a class="nav-link" href="#">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  <div class="container-fluid">
+    <div class="row">
 
       <!-- 🔹 COLUMNA IZQUIERDA -->
       <div class="col-lg-6 p-0 d-none d-lg-block split-left">
         <div class="overlay-content h-100 d-flex flex-column justify-content-between p-5 text-white">
           
-          <!-- Logo -->
-          <span class="brand-logo">
-            <img src="../assets/KondorSVG 1.svg" alt="Kondor Logo">
-          </span>
-
           <!-- Título grande -->
           <h1 class="big-title">
             Moverte<br>
