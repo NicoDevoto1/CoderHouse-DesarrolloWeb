@@ -26,13 +26,16 @@
 }
 
 // Estilos del texto del hero
-.hero__content { color: $text-white; }
-.hero__eyebrow { font-size: 0.75rem; letter-spacing: 2px; }
 .hero__title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     line-height: 1.1;
     margin: 1rem 0 2rem;
+    @include heading-style(map-get($heading-sizes, "h1"), 900, color('white')); // Usamos el mixin con un tamaño específico
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 2s ease forwards;
 }
+
 .hero__media img { max-width: 420px; width: 100%; height: auto; }
 
 // Responsive

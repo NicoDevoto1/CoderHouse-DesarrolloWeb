@@ -2,9 +2,9 @@
 <html lang="es">
 
 <head>
-    <title>
-        <title>Kondor | Ropa Deportiva Urbana para Hombre y Mujer</title>
-    </title>
+
+    <title>Kondor | Ropa Deportiva Urbana para Hombre y Mujer</title>
+
     <meta name="description"
         content="Kondor ofrece ropa deportiva urbana para hombre y mujer: camperas, remeras, pantalones y buzos con estilo streetwear. Envíos a todo el país.">
     <meta charset="UTF-8">
@@ -23,84 +23,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css">
 
-    <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Store",
- "name": "Kondor",
- "image": "https://www.kondor.com/assets/hero-background.jpg",
- "url": "https://www.kondor.com",
- "description": "Tienda de ropa deportiva urbana para hombre y mujer.",
- "priceRange": "$$",
- "address": {
-   "@type": "PostalAddress",
-   "addressCountry": "AR"
- }
-}
-</script>
-
 </head>
 
 <body>
 
-    <div class="hero-wrapper">
+     <header class="fixed-top negro-kondor shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container-fluid px-4">
+                <div class="row w-100 align-items-center g-0">
+                    <div class="col-lg-4 d-none d-lg-flex gap-3">
+                        <a class="nav-link text-white enlace" href="../index.html">Home</a>
+                        <a class="nav-link text-white enlace" href="#">Página</a>
+                        <a class="nav-link text-white enlace" href="#">Todo lo nuevo</a>
+                        <a class="nav-link text-white enlace" href="pages/contacto.html">Contacto</a>
+                    </div>
 
-        <header class="fixed-top bg-naranja-kondor shadow-sm">
-            <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <div class="container-fluid px-4">
-                    <div class="row w-100 align-items-center g-0">
-                        <!--Barra de navegación (header)-->
-                        <div class="col-lg-4 d-none d-lg-flex gap-3">
-                            <a class="nav-link text-white enlace" href="index.html">Home</a>
-                            <a class="nav-link text-white enlace" href="#">Página</a>
-                            <a class="nav-link text-white enlace" href="#">Todo lo nuevo</a>
-                            <a class="nav-link text-white enlace" href="pages/contacto.html">Contacto</a>
-                        </div>
-                        <!--Logo centrado-->
-                        <div class="col-6 col-lg-4 text-start text-lg-center">
-                            <a class="navbar-brand m-0" href="#">
-                                <img src="assets/KondorBlanco.svg" alt="Kondor" height="32">
+                    <div class="col-6 col-lg-4 text-start text-lg-center">
+                        <a class="navbar-brand m-0" href="../index.html">
+                            <img src="../assets/KondorBlanco.svg" loading="lazy" alt="Kondor Marca" height="32">
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-4 d-flex justify-content-end align-items-center gap-3">
+                        <div class="d-none d-lg-flex align-items-center gap-3">
+                            <a class="nav-link text-white" href="#">Ingresar</a>
+                            <a href="../pages/carrito.html" class="btn-carrito-limpio">
+                                CARRITO (0)
                             </a>
                         </div>
-
-                        <div class="col-6 col-lg-4 d-flex justify-content-end align-items-center gap-3">
-                            <!--Carrito y mis compras header-->
-                            <div class="d-none d-lg-flex align-items-center gap-3">
-                                <a class="nav-link text-white" href="#">Ingresar</a>
-                                <a href="pages/carrito.html" class="btn-carrito-limpio">
-                                    CARRITO (0)
-                                </a>
-                            </div>
-
-                            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#mobileMenu">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                        <!--Menú para el responsive-->
-                        <div class="collapse navbar-collapse" id="mobileMenu">
-                            <ul class="navbar-nav d-lg-none mt-3 pb-3 text-center border-top border-white-50">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Página</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Todo lo nuevo</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
-                                <li class="nav-item border-top border-white-25 mt-2 pt-2">
-                                    <a class="nav-link" href="#">Ingresar</a>
-                                </li>
-                            </ul>
-                        </div>
-
+                        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mobileMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
                 </div>
-            </nav>
-        </header>
 
+                <div class="collapse navbar-collapse" id="mobileMenu">
+                    <ul class="navbar-nav d-lg-none mt-3 pb-3 text-center border-top border-white-50">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Página</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Todo lo nuevo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item pt-2 border-top border-white-25"><a class="nav-link" href="#">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-wrapper">
         <section class="hero d-flex align-items-center">
             <div class="container position-relative z-1">
                 <div class="row align-items-center min-vh-100 py-5">
 
                     <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
-                        <span class="hero__eyebrow text-white-50 d-block mb-2">LO MEJOR DE LO URBANO</span>
+                        <span class="hero__eyebrow text-white-50 d-block mb-2 font-title-sc">LO MEJOR DE LO URBANO</span>
                         <h1 class="hero__title text-white fw-bold mb-4">
                             Camperas<br>para todo el año
                         </h1>
@@ -126,11 +104,11 @@
         <section class="todo-lo-nuevo">
 
             <div class="section-header">
-                <h2>Todo lo nuevo</h2>
+                <h2 class="section-title">Todo lo nuevo</h2>
                 <ul class="category-filter">
-                    <li><a href="pages/hombre.html">Hombre</a></li>
                     <li><a href="pages/mujeres.html">Mujer</a></li>
                     <li><a href="pages/Pantalones.html">Pantalones</a></li>
+                    <li><a href="pages/hombre.html">Hombre</a></li>
                     <li><a href="pages/Remeras.html">Remeras</a></li>
                 </ul>
             </div>
@@ -150,7 +128,7 @@
 
                 <article class="product-card">
                     <div class="img-container">
-                        <img src="assets/remera-Unisex-Oversize-DeepOcean.jpg"
+                        <img src="assets/remera-Unisex-Oversize-DeepOcean.jpg" loading="lazy"
                             alt="Remera oversize color azul marino unisex Kondor modeolo Deep Ocean">
                     </div>
                     <div class="product-info">
@@ -161,7 +139,7 @@
 
                 <article class="product-card">
                     <div class="img-container">
-                        <img src="assets/remera-Mujer-Oversize-Blanca-CyclingClub.jpg"
+                        <img src="assets/remera-Mujer-Oversize-Blanca-CyclingClub.jpg" loading="lazy"
                             alt="Remera oversize color blanca con estampado blanca Kondor modelo Cycling Club">
                     </div>
                     <div class="product-info">
@@ -172,7 +150,7 @@
 
                 <article class="product-card">
                     <div class="img-container">
-                        <img src="assets/Buzo-Hombre-Negro-Blanco.jpg"
+                        <img src="assets/Buzo-Hombre-Negro-Blanco.jpg" loading="lazy"
                             alt="Buzo con cuello chomba color negro y Blanco hombre Kondor modelo Ole">
                     </div>
                     <div class="product-info">
@@ -183,7 +161,7 @@
 
                 <article class="product-card">
                     <div class="img-container">
-                        <img src="assets/camperaRompeViento-Hombre-VerdeOscuro.jpg"
+                        <img src="assets/camperaRompeViento-Hombre-VerdeOscuro.jpg" loading="lazy"
                             alt="Campera Rompe Viento color verde oscuro y negro hombre Kondor modelo HH">
                     </div>
                     <div class="product-info">
@@ -194,7 +172,7 @@
 
                 <article class="product-card">
                     <div class="img-container">
-                        <img src="assets/camperaNorthFace-Hombre-verdePantano.jpg"
+                        <img src="assets/camperaNorthFace-Hombre-verdePantano.jpg" loading="lazy"
                             alt="Campera Northface Color Verde Pantano tipo impermeable hombre Kondor modelo Hitclimb ">
                     </div>
                     <div class="product-info">
@@ -205,7 +183,7 @@
 
                 <article class="product-card">
                     <div class="img-container">
-                        <img src="assets/remeraNonStraight-Hombre-Básicas.jpg"
+                        <img src="assets/remeraNonStraight-Hombre-Básicas.jpg" loading="lazy"
                             alt="Remera básica hombre colores clásicos Kondor modelo NonStraight">
                     </div>
                     <div class="product-info">
@@ -216,7 +194,8 @@
 
                 <article class="product-card">
                     <div class="img-container">
-                        <img src="assets/jeanBaggyCroc.jpg" alt="Jean Baggy mujer color azul clásico Kondor modelo Croc">
+                        <img src="assets/jeanBaggyCroc.jpg" loading="lazy"
+                            alt="Jean Baggy mujer color azul clásico Kondor modelo Croc">
                     </div>
                     <div class="product-info">
                         <h4>Jean Baggy Croc</h4>
@@ -226,41 +205,46 @@
 
             </div>
         </section>
-
+        <!--Sección de las últimas noticias sobre lo nuevo-->
         <section class="news-section">
+            
             <h3 class="section-title">Últimas noticias</h3>
+                <div class="news-grid">
 
-            <div class="news-grid">
-
-                <div class="news-col-left">
-                    <div class="news-card vertical-card">
-                        <img src="assets/3Chicasconjuntos.jpg" alt="Noticia Principal">
+                    <div class="news-col-left">
+                        <div class="news-card vertical-card">
+                            <img src="assets/conjuntos-Tendencias-Verano-Kondor.jpg" alt="Conjuntos tendencia verano hombre y mujer Kondor">
+                            <h4 class="news-card__title">Lo que el verano nos dejo</h4>
+                        </div>
                     </div>
+                    <div class="news-col-right">
+
+                        <div class="news-row-top">
+                            <div class="news-card horizontal-card">
+                                <img src="assets/tendenciasQueNuncaMueren-Kondor.jpg"
+                                    alt="Tendencias que nunca mueren marca Kondor">
+                                <h4 class="news-card__title">Tendencias que nunca mueren</h4>
+                            </div>
+                        </div>
+
+                        <div class="news-row-bottom">
+
+                            <div class="news-card small-card">
+                                <img src="assets/conjunto-Hombre-MoreMoneyMoreLove-Kondor.jpg"
+                                    alt="Conjuntos Hombre More Money More Love Marca Kondor">
+                                    <h4 class="news-card__title">Conjuntos que no cansan</h4>
+                            </div>
+                            <div class="news-card small-card last">
+                                <img src="assets/campera-Abrigo-Mujer-Blanca-Muppet.jpg"
+                                    alt="Campera de Abrigo Mujer color Blanca modelo Muppet Marca Kondor">
+                                    <h4 class="news-card__title">El invierno no es excusa para no salir</h4>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
-                <div class="news-col-right">
 
-                    <div class="news-row-top">
-                        <div class="news-card horizontal-card">
-                            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1000&auto=format&fit=crop"
-                                alt="Noticia Secundaria">
-                        </div>
-                    </div>
-
-                    <div class="news-row-bottom">
-
-                        <div class="news-card small-card">
-                            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=500&auto=format&fit=crop"
-                                alt="Noticia pequeña 1">
-                        </div>
-                        <div class="news-card small-card last">
-                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=500&auto=format&fit=crop"
-                                alt="Noticia pequeña 2">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
         </section>
 
         <section class="seccion-banner">
@@ -274,14 +258,29 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="social-icons">
-                <a href="#">f</a> <a href="#">X</a>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>KONDOR 2025</h4>
+                <p>Tu tendencia, tu identidad. Explorá las mejores colecciones para tu estilo diario.</p>
             </div>
-
-            <p class="copyright">
-                Kondor-2025. Defensa de las y los consumidores. <a href="#">Para reclamos ingrese aqui</a>
-            </p>
+            <div class="footer-column">
+                <h5>Enlaces rápidos</h5>
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Tendencias</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h5>Seguinos</h5>
+                <div class="social-icons">
+                    <a href="#" class="icon">f</a>
+                    <a href="#" class="icon">X</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Kondor-2025. Defensa de las y los consumidores. <a href="#">Para reclamos ingrese aquí</a></p>
         </div>
     </footer>
 

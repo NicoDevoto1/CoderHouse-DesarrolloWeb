@@ -38,14 +38,16 @@
 
 // --- SECCIÓN NOTICIAS (Mosaico) ---
 .news-section {
+
+    @include bg-gradiente-seccion;
+
     padding: 60px 50px;
-    max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
+    padding: 100px 40px;
 
     .section-title {
-        font-size: 32px;
-        margin-bottom: 30px;
-        font-weight: bold;
+        @include heading-style(map-get($heading-sizes, "h2"), 600, color('black')); // Usamos el mixin con un tamaño específico
     }
 
     .news-grid {

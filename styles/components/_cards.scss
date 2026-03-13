@@ -71,3 +71,27 @@
         }
     }
 }
+
+//Card con overflow hidden para la sección noticias
+.news-card {
+    position: relative; // Obligatorio para que el título se ubique adentro
+    overflow: hidden;
+    
+    img {
+        transition: transform 0.5s ease;
+    }
+
+    // Aplicamos el Mixin al título
+    &__title {
+        @include overlay-titulo;
+        transition: padding-bottom 0.3s ease; // Animación suave al pasar el mouse
+    }
+
+    // Efecto Hover: el título sube un poquito cuando pasas el mouse
+    &:hover {
+        img { transform: scale(1.05); }
+        .news-card__title {
+            padding-bottom: 25px;
+        }
+    }
+}

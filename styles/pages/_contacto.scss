@@ -1,26 +1,25 @@
 // 1. SOLUCIÓN AL HEADER Y EL SCROLL
 .contact-page {
     padding-top: 80px; // Empujamos debajo del header (¡tu idea original estaba bien!)
-    height: 100vh;     // Limitamos el alto a exactamente la pantalla
-    overflow: hidden;  // Adiós barra de scroll
+    height: 100vh; // Limitamos el alto a exactamente la pantalla
+    overflow: hidden; // Adiós barra de scroll
 
     // Le decimos al grid de Bootstrap que ocupe todo el espacio sobrante
-    .container-fluid, .row {
+    .container-fluid,
+    .row {
         height: 100%;
     }
 }
 
-// 2. SOLUCIÓN PARA LA COLUMNA IZQUIERDA Y LA IMAGEN
+// Columna izquierda
 .split-left {
-    // EL TRUCO MULTIMEDIAL: Ponemos un degradado negro semitransparente (0.5) 
-    // JUSTO ANTES de la imagen de fondo. Esto actúa como "lente polarizado".
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url("../assets/split-left-background.jpg"); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../assets/split-left-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    
+
     // Tipografías
     .big-title {
         font-size: clamp(3rem, 6vw, 5rem); // Responsive: Achica la fuente en monitores chicos
@@ -39,33 +38,36 @@
     color: color('black');
     text-decoration: none;
     transition: color 0.3s ease;
-    
+
     &:hover {
         color: color('primary'); // Al pasar el mouse se pone naranja Kondor
     }
 }
 
-// Fix para quitar el borde azul que pone Bootstrap por defecto al hacer clic
+// Fix para sacar el borde azul que pone Bootstrap por defecto al hacer clic
 .form-control:focus {
     box-shadow: none;
     border-color: color('black');
 }
+
 .big-title {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s ease forwards;
+   @include heading-style(map-get($heading-sizes, "h1"), 900, color('white')); // Usamos el mixin con un tamaño específico
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
 }
 
 .intro-text {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.4s;
+    @include font-body(1.2rem);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.4s;
 }
 
 @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
